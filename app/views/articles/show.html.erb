@@ -1,0 +1,16 @@
+<h1><%= @article.title %></h1>
+
+<p><%= @article.content %></p>
+
+
+
+<%= link_to 'Back to the list of articles', articles_path %>
+
+<br>
+<%= link_to article_path(@article), method: 'delete', data: { confirm: "Are you sure?" } do %>
+  <i class="fa fa-trash-o"></i>
+<% end %>
+
+<br>
+<%= link_to 'Edit article', edit_article_path(@article) %>
+<i class="fas fa-pen"></i>
